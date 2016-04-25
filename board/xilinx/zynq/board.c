@@ -29,16 +29,6 @@ static xilinx_desc fpga045 = XILINX_XC7Z045_DESC(0x45);
 static xilinx_desc fpga100 = XILINX_XC7Z100_DESC(0x100);
 #endif
 
-int gpio_init (void)
-{
-#ifdef CONFIG_XILINX_GPIO
-	reset_pin = gpio_alloc(CONFIG_SYS_GPIO_0_ADDR, "reset", 1);
-	if (reset_pin != -1)
-		gpio_request(reset_pin, "reset_pin");
-#endif
-	return 0;
-}
-
 int board_init(void)
 {
 #if defined(CONFIG_ENV_IS_IN_EEPROM) && !defined(CONFIG_SPL_BUILD)
@@ -84,13 +74,12 @@ int board_init(void)
 	if (eeprom_write(CONFIG_SYS_I2C_MUX_ADDR, 0, &eepromsel, 1))
 		puts("I2C:EEPROM selection failed\n");
 #endif
-
-	gpio_init();
 	return 0;
 }
 
 int board_late_init(void)
 {
+	/*
 	switch ((zynq_slcr_get_boot_mode()) & ZYNQ_BM_MASK) {
 	case ZYNQ_BM_QSPI:
 		setenv("modeboot", "qspiboot");
@@ -111,7 +100,7 @@ int board_late_init(void)
 		setenv("modeboot", "");
 		break;
 	}
-
+	*/
 	return 0;
 }
 
