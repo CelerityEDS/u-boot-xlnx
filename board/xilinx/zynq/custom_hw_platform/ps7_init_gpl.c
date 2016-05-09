@@ -12986,18 +12986,18 @@ ps7_init()
 /* start timer */
  void perf_start_clock(void)
 {
-    *(volatile unsigned int*)SCU_GLOBAL_TIMER_CONTROL = ((1 << 0) | // Timer Enable
-                              (1 << 3) | // Auto-increment
-                              (0 << 8) // Pre-scale
-    ); 
+	*(volatile unsigned int*)SCU_GLOBAL_TIMER_CONTROL = ((1 << 0) | // Timer Enable
+						      (1 << 3) | // Auto-increment
+						      (0 << 8) // Pre-scale
+	); 
 }
 
 /* stop timer and reset timer count regs */
  void perf_reset_clock(void)
 {
-    perf_disable_clock();
-    *(volatile unsigned int*)SCU_GLOBAL_TIMER_COUNT_L32 = 0;
-    *(volatile unsigned int*)SCU_GLOBAL_TIMER_COUNT_U32 = 0;
+	perf_disable_clock();
+	*(volatile unsigned int*)SCU_GLOBAL_TIMER_COUNT_L32 = 0;
+	*(volatile unsigned int*)SCU_GLOBAL_TIMER_COUNT_U32 = 0;
 }
 
 /* Compute mask for given delay in miliseconds*/
@@ -13011,13 +13011,13 @@ int get_number_of_cycles_for_delay(unsigned int delay)
 /* stop timer */
  void perf_disable_clock(void)
 {
-    *(volatile unsigned int*)SCU_GLOBAL_TIMER_CONTROL = 0;
+	*(volatile unsigned int*)SCU_GLOBAL_TIMER_CONTROL = 0;
 }
 
 void perf_reset_and_start_timer() 
 {
-        perf_reset_clock();
-        perf_start_clock();
+  	    perf_reset_clock();
+	    perf_start_clock();
 }
 
 
