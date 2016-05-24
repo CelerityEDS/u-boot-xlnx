@@ -50,13 +50,13 @@
 &uart0 {
 	current-speed = <115200>;
 	device_type = "serial";
-	port-number = <0>;
+	port-number = <2>;
 	status = "okay";
 };
 &uart1 {
 	current-speed = <115200>;
 	device_type = "serial";
-	port-number = <2>;
+	port-number = <3>;
 	status = "okay";
 };
 &axi_ethernetlite_0 {
