@@ -36,7 +36,7 @@
 			};
 		};
 		axi_fifo_mm_s_0: axi_fifo_mm_s@43c20000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 31 4>;
 			reg = <0x43c20000 0x10000 0x43c40000 0x10000>;
@@ -70,7 +70,7 @@
 			xlnx,use-tx-data = <0x0>;
 		};
 		axi_fifo_mm_s_1: axi_fifo_mm_s@43c30000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 34 4>;
 			reg = <0x43c30000 0x10000 0x43c50000 0x10000>;
@@ -104,7 +104,7 @@
 			xlnx,use-tx-data = <0x0>;
 		};
 		axi_fifo_mm_s_2: axi_fifo_mm_s@43c60000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 32 4>;
 			reg = <0x43c60000 0x10000 0x43c70000 0x10000>;
@@ -138,7 +138,7 @@
 			xlnx,use-tx-data = <0x0>;
 		};
 		axi_fifo_mm_s_3: axi_fifo_mm_s@43c80000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 35 4>;
 			reg = <0x43c80000 0x10000 0x43c90000 0x10000>;
@@ -172,7 +172,7 @@
 			xlnx,use-tx-data = <0x0>;
 		};
 		axi_fifo_mm_s_4: axi_fifo_mm_s@43ca0000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 36 4>;
 			reg = <0x43ca0000 0x10000 0x43cb0000 0x10000>;
@@ -206,7 +206,7 @@
 			xlnx,use-tx-data = <0x0>;
 		};
 		axi_fifo_mm_s_5: axi_fifo_mm_s@43cc0000 {
-			compatible = "xlnx,axi-fifo-mm-s-4.1";
+			compatible = "generic-uio";
 			interrupt-parent = <&intc>;
 			interrupts = <0 33 4>;
 			reg = <0x43cc0000 0x10000 0x43cd0000 0x10000>;
