@@ -26,9 +26,16 @@
 	};
 	memory {
 		device_type = "memory";
-		reg = <0x0 0x20000000>;
+		reg = <0x0 0x10000000>;
+	};
+	reserved_memory {
+		device_type = "reserved_memory";
+		reg = <0x10000000 0x1000 0x10001000 0xD0001000>;
+		compatible = "generic-uio";
 	};
 };
+
+
 &gpio0 {
 	emio-gpio-width = <64>;
 	gpio-mask-high = <0x0>;
