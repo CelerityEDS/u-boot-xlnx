@@ -15,7 +15,7 @@
 		};
 	};
 	chosen {
-		bootargs = "console=ttyPS0,115200 root=/dev/ram0 uio_pdrv_genirq.of_id=generic-uio";
+		bootargs = "console=ttyPS0,115200 root=/dev/ram0 uio_pdrv_genirq.of_id=generic-uio isolcpus=1";
 	};
 	aliases {
 		ethernet0 = &axi_ethernetlite_0;
@@ -42,8 +42,13 @@
 	gpio-mask-low = <0x5600>;
 };
 &i2c0 {
-	clock-frequency = <400000>;
 	status = "okay";
+	rtc@6F {
+		compatible = "microchip,mcp7940x";
+		reg = <0x6F>;
+	};
+	
+
 };
 &intc {
 	num_cpus = <2>;
